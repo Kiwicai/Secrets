@@ -23,7 +23,7 @@
     <favorites_list name="webapps" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.2390625">
+    <splitter split-orientation="horizontal" split-proportion="0.5984375">
       <split-first>
         <leaf>
           <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
@@ -49,8 +49,8 @@
           <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/webapps/urls.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="375">
-                  <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+                <state relative-caret-position="390">
+                  <caret line="26" column="68" selection-start-line="26" selection-start-column="68" selection-end-line="26" selection-end-column="68" />
                   <folding>
                     <element signature="e#641#673#0" expanded="true" />
                   </folding>
@@ -58,7 +58,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="login.html" pinned="false" current-in-tab="true">
+          <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/secrets/templates/login.html">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="195">
@@ -83,11 +83,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/secrets/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="570">
-                  <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+                <state relative-caret-position="530">
+                  <caret line="47" column="10" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="10" />
                   <folding>
                     <element signature="e#0#64#0" expanded="true" />
                   </folding>
@@ -172,8 +172,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/webapps/settings.py" />
-        <option value="$PROJECT_DIR$/webapps/urls.py" />
-        <option value="$PROJECT_DIR$/secrets/views.py" />
         <option value="$PROJECT_DIR$/secrets/models.py" />
         <option value="$PROJECT_DIR$/secrets/templates/login.html" />
         <option value="$PROJECT_DIR$/secrets/static/login.css" />
@@ -181,6 +179,8 @@
         <option value="$PROJECT_DIR$/secrets/static/register.css" />
         <option value="$PROJECT_DIR$/secrets/templates/register.html" />
         <option value="$PROJECT_DIR$/secrets/templates/mySecrets.html" />
+        <option value="$PROJECT_DIR$/webapps/urls.py" />
+        <option value="$PROJECT_DIR$/secrets/views.py" />
       </list>
     </option>
   </component>
@@ -635,26 +635,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webapps/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding>
-            <element signature="e#641#673#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/secrets/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#64#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/secrets/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -735,6 +715,26 @@
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="68" selection-start-line="26" selection-start-column="68" selection-end-line="26" selection-end-column="68" />
+          <folding>
+            <element signature="e#641#673#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/secrets/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="530">
+          <caret line="47" column="10" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#64#0" expanded="true" />
           </folding>
         </state>
       </provider>

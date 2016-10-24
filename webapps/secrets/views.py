@@ -41,3 +41,15 @@ def mySecrets(request):
 	context['secrets'] = secrets
 	context['user'] = request.user
 	return render(request, 'mySecrets.html', context)
+
+@login_required
+def deleteSecret(request):
+	context ={}
+	# TODO
+	return render(request, 'mySecrets.html', context)
+
+@login_required
+def updateSecret(request):
+	# TODO
+	context ={}
+	return render(request, 'mySecrets.html', context)
