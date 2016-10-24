@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'secrets',
 ]
 
 MIDDLEWARE = [
@@ -50,6 +51,10 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'webapps.urls'
+
+LOGIN_URL = 'login'
+
+LOGIN_REDIRECT_URL = '/mySecrets/'
 
 TEMPLATES = [
     {
