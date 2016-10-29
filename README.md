@@ -5,6 +5,13 @@
 ##Browser: Chrome
 ##OS: Mac OS X Yosemite 10.10.4
 
+## Why use Django framework?
+Because Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. It takes security issue into account such as CSRF, SQL injection, password encryption. It also provides useful features such as form validation.  
+
+In this project, I use the default SQLite for data persistence.  
+
+To get more information of Django, you could visit https://www.djangoproject.com/
+
 ##Environment SetUp
 * If you don't have python, please install it. Before instsall python, you should install pip first. Make sure you are using python 2.7. This project works well with python 2.7
 * Install Django 1.10  
