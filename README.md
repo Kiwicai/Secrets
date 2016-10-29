@@ -52,19 +52,26 @@ You will see OK in your console if all test cases passes.
 
 ##URLS
 http://127.0.0.1:8000/  
-The above link is for Login, if already login, redirect to http://127.0.0.1:8000/mySecrets/  
+The above link is for Login,  
+If you use GET, your browser will display a form for username and password input. You could also see registration link.   
+If you use POST and your form is valid, you will be redirected into http://127.0.0.1:8000/mySecrets/  
+If already login, redirect to http://127.0.0.1:8000/mySecrets/  
 
-http://127.0.0.1:8000/register/    
+http://127.0.0.1:8000/register/  
+
+
 http://127.0.0.1:8000/logout/  
 
 http://127.0.0.1:8000/mySecrets/  
 The above link is for showing login user's secrets. User could only see his/her own secrets.  
 
 http://127.0.0.1:8000/updateSecret/SECRET_ID  
-The above link is for updating user's one secret. User could only update his/her own secrets.  With GET, UI will show previous secret content. With POST, secret will be updated.
+The above link is for updating user's one secret. User could only update his/her own secrets.  With GET, UI will show previous secret content. With POST, secret will be updated. If user try to update some not-existing secret or other users' secret, 404 error 403 error will be showed.
 
 http://127.0.0.1:8000/deleteSecret/SECRET_ID  
-The above link is for deleting login user's one secret. User could only delete his/her own secrets. 
+The above link is for deleting login user's one secret. User could only delete his/her own secrets. (GET)  
+After deleting successfully, user could see all current secrets of his own.
+If user try to delete some not-existing secret or other users' secret, 404 error 403 error will be showed.
 
 ##External sources:
 [DjangoAdvancedTestTopic](https://docs.djangoproject.com/en/1.10/topics/testing/advanced/)  
