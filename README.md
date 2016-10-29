@@ -27,6 +27,12 @@ Then run server again by
 
 * You could visit http://127.0.0.1:8000/ to see the UI. Registration,login, add new secret, update and delete secret are implemented.
 
+* Tests are implemented in Secrets/webapps/secrets/tests.py. To run the test file, make sure you are in Secrets/webapps/ so that you could see manage.py, then use the below instruction in terminal:  
+```
+  ./manage.py test secrets.tests
+```
+You will see OK in your console if all test cases passes.
+
 ##URLS
 http://127.0.0.1:8000/  
 The above link is for Login, if already login, redirect to http://127.0.0.1:8000/mySecrets/  
