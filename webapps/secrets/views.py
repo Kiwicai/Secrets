@@ -4,8 +4,9 @@ from django.contrib.auth import login
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
-from secrets.models import *
+from secrets.models import Secret
 from django.utils import timezone
+from django.http import HttpResponseForbidden
 
 @transaction.atomic
 def register(request):
@@ -43,13 +44,46 @@ def mySecrets(request):
 	return render(request, 'mySecrets.html', context)
 
 @login_required
-def deleteSecret(request):
-	context ={}
-	# TODO
+@transaction.atomic
+def deleteSecret(request, id):
+	# check id
+	secret = get_object_or_404(Secret, id=id)
+	if secret.user != request.user:
+		return HttpResponseForbidden()
+
+	context = {}
+	secret.delete()
+
+	secrets = Secret.objects.filter(user=request.user).order_by('-postDate') # User could only see his/her own secrets
+	context['secrets'] = secrets
+	context['user'] = request.user
 	return render(request, 'mySecrets.html', context)
 
 @login_required
-def updateSecret(request):
-	# TODO
-	context ={}
-	return render(request, 'mySecrets.html', context)
+@transaction.atomic
+def updateSecret(request, id):
+	context = {}
+	# check id
+	secret = get_object_or_404(Secret, id=id)
+	if secret.user != request.user:
+		return HttpResponseForbidden()
+
+	# check method
+	if request.method == "GET":
+		context['user'] = request.user
+		context['secret'] = secret
+		return render(request, 'updateSecret.html', context)
+
+	# POST updated secret
+	if 'updatedSecret' in request.POST and request.POST['updatedSecret']:
+		print 'Enter update function'
+		updatedSecret = request.POST['updatedSecret']
+		secret.content = updatedSecret
+		secret.save()
+	else:
+		print 'sth wrong'
+
+	secrets = Secret.objects.filter(user=request.user).order_by('-postDate') # User could only see his/her own secrets
+	context['secrets'] = secrets
+	context['user'] = request.user
+	return redirect('mySecrets')
