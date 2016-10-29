@@ -6,8 +6,18 @@
 ##OS: Mac OS X Yosemite 10.10.4
 
 ##Environment SetUp
-* If you don't have python, please install it. Before instsall python, you could install pip first. Make sure you are using python 2.7. This project works well with python 2.7
-* TODO: Install Django 1.10  
+* If you don't have python, please install it. Before instsall python, you should install pip first. Make sure you are using python 2.7. This project works well with python 2.7
+* Install Django 1.10  
+```
+  pip install Django==1.10.2
+```
+To verify that Django can be seen by Python, type python from your shell. Then at the Python prompt, try to import Django:
+```
+  >>>import django
+  >>>print(django.get_version())
+  1.10
+```
+
 * Clone Secrets project from git
 * Use your terminal to enter Secrets/webapps/, make sure you could see manage.py.
 * Then run this app by following instructions:
