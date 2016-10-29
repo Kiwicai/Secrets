@@ -63,8 +63,14 @@ def deleteSecret(request, id):
 @transaction.atomic
 def updateSecret(request, id):
 	context = {}
+
 	# check id
 	secret = get_object_or_404(Secret, id=id)
+	print '-------------------'
+	print 'secret user id'
+	print secret.user.id
+	print 'request user id'
+	print request.user.id
 	if secret.user != request.user:
 		return HttpResponseForbidden()
 
@@ -76,12 +82,14 @@ def updateSecret(request, id):
 
 	# POST updated secret
 	if 'updatedSecret' in request.POST and request.POST['updatedSecret']:
-		print 'Enter update function'
+		# print 'Enter update function'
 		updatedSecret = request.POST['updatedSecret']
 		secret.content = updatedSecret
 		secret.save()
 	else:
-		print 'sth wrong'
+		context['user'] = request.user
+		context['secret'] = secret
+		return render(request, 'updateSecret.html', context)
 
 	secrets = Secret.objects.filter(user=request.user).order_by('-postDate') # User could only see his/her own secrets
 	context['secrets'] = secrets
