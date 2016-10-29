@@ -8,6 +8,3 @@
 
 
 ##External sources:
-
-[Jquery Ajax](http://api.jquery.com/jquery.ajax/)  
-
