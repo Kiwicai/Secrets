@@ -5,7 +5,7 @@ from secrets.models import Secret
 from django.test import Client
 from django.http import Http404
 
-# test login successful with a new user
+
 class SimpleTest(TestCase):
 
     def setUp(self):

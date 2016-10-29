@@ -22,7 +22,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', django.contrib.auth.views.login, {'template_name': 'login.html', 'redirect_authenticated_user': True}, name='login'),
     url(r'^register/$', secrets.views.register, name='register'),
-    url(r'^logout', django.contrib.auth.views.logout_then_login, name='logout'),
+    url(r'^logout/', django.contrib.auth.views.logout_then_login, name='logout'),
     url(r'^deleteSecret/(?P<id>\d+)$', secrets.views.deleteSecret, name='deleteSecret'),
     url(r'^updateSecret/(?P<id>\d+)$', secrets.views.updateSecret, name='updateSecret'),
     url(r'^mySecrets/$', secrets.views.mySecrets, name='mySecrets'),
