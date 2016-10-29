@@ -29,11 +29,18 @@ Then run server again by
 
 ##URLS
 http://127.0.0.1:8000/  
+The above link is for Login, if already login, redirect to http://127.0.0.1:8000/mySecrets/  
+
 http://127.0.0.1:8000/register/    
 http://127.0.0.1:8000/logout/  
 http://127.0.0.1:8000/mySecrets/  
+The above link is for showing login user's secrets. User could only see his/her own secrets.  
+
 http://127.0.0.1:8000/updateSecret/SECRET_ID  
+The above link is for showing updating user's secrets. User could only update his/her own secrets.  With GET, UI will show previous secret content. With POST, secret will be updated.
+
 http://127.0.0.1:8000/deleteSecret/SECRET_ID  
+The above link is for showing login user's secrets. User could only delete his/her own secrets. 
 
 ##External sources:
 [DjangoAdvancedTestTopic](https://docs.djangoproject.com/en/1.10/topics/testing/advanced/)  
